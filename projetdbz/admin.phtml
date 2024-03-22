@@ -1,0 +1,97 @@
+<?php 
+
+include('db.php');
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap" rel="stylesheet">
+    <title>Site DBZ Soin</title>   
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <img src="image/de17217161e096ef64ad3fe00621467b-removebg-preview.png" class="logo" alt="logo">
+                <a href="index.php #equipe">Présentation</a>
+                <a href="index.php #Médicaments">Médicaments</a>
+                <a href="index.php #box">Contact</a>
+                <a href="admin.phtml">Admin</a>
+                <img src="image/kin-removebg-preview.png" class="logo" alt="logo">
+            </div>
+            
+        </nav>
+    </header>
+    
+ <div class = formulaire >
+    <h3>Ajouter un médicament</h3>
+    <form action="ajout_admin.php" method="post">
+    <div>
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="detail">Détails</label>
+            <input type="text" id="detail" name="detail">
+        </div>
+        <div>
+            <label for="image">Image</label>
+            <input type="text" id="image" name="image">
+        </div>
+        <button type="submit">Entrer votre médicament</button>
+    </div>
+</form>
+</div>
+
+<?php 
+
+include 'affiche_admin.php';
+// var_dump($_POST)
+
+// $name = $_POST['name'];
+// $detail = $_POST['detail'];
+// $image = $_POST['image'];
+
+// $link = mysqli_connect("localhost", "root","", "pojetdbz");
+
+// JE VERIFIE MA CONNECTION A MA BDD(base de donné)
+
+// if (mysqli_connect_errno()) {
+//     printf("Échec de la connexion : %s\n", mysqli_connect_error());
+// }
+
+// $sql = "SELECT * FROM carte";
+   
+
+//     $result = $link->query($sql);
+//     $cartes = $result->fetch_all(MYSQLI_ASSOC);
+   
+
+//     foreach ($cartes as $carte){ 
+//         echo 
+//         '<div style= "border:solid class="card w-50"">
+//         <img src=" '. $carte["image"] .'" alt="" width ="100px" >
+
+//         <p>' . $carte["name"].' </p>
+
+//         <p> '. $carte["detail"].' </p>
+
+//         <br>
+//         <a class=" href="detail.php?id='.$carte["id"].'">detail</a>
+//         <a href="supprimer.php?id='.$carte["id"].'">supprimer</a>
+//         <a href="modifier.php?id='.$carte["id"].'">modifier</a>
+
+//         </div>';
+//      }
+
+?>
+
+
+</body>
+</html>
